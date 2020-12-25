@@ -19,7 +19,22 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+
+-optimizationpasses 5
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+-dontpreverify
+-verbose
+
+-keep, allowobfuscation class com.test.toasterlibrary*
+-keepclassmembers, allowobfuscation class * {
+    *;
+}
 -keep public class com.test.toasterlibrary.ToasterMessage
 -keep public class com.test.toasterlibrary.R
--keepclassmembers class com.test.toasterlibrary.ToasterMessage {
-                                                                    public <fields>; }
+-keepclassmembernames class com.test.toasterlibrary.ToasterMessage{
+                                                                      public <methods>;
+                                                                      public <fields>;
+                                                                      #!private *; also tried this but it didn't work
+                                                                  }
