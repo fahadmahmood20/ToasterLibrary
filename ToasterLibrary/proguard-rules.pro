@@ -19,7 +19,8 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
-
--keepclassmembers class com.test.toasterlibrary.ToasterMessage { <fields>; }
--keepclassmembers class com.test.toasterlibrary.ToasterMessage { public *; }
--keepclassmembers class com.test.toasterlibrary.R { <fields>; }
+-keep public class com.test.toasterlibrary.ToasterMessage
+-keep public class com.test.toasterlibrary.R
+#-keepclassmembers class com.test.toasterlibrary.ToasterMessage { <fields>; }
+#-keepclassmembers class com.test.toasterlibrary.ToasterMessage { public *; }
+#-keepclassmembers class com.test.toasterlibrary.R { <fields>; }
