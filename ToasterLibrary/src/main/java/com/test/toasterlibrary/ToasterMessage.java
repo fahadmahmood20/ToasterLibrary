@@ -5,23 +5,24 @@ import android.widget.Toast;
 
 public class ToasterMessage {
 
-    private int a;
-    public static void s(Context c, String message){
+    private int heartRate;
 
-        Toast.makeText(c,message,Toast.LENGTH_SHORT).show();
+
+    public static void s(Context c, String message) {
+
+        Toast.makeText(c, message, Toast.LENGTH_SHORT).show();
     }
 
     public ToasterMessage() {
-        setA();
+        setHeartRate(5);
     }
 
 
-    private void setA()
-    {
-        a = 5;
+    public void setHeartRate(int heartRate) {
+        this.heartRate = heartRate;
     }
-    public int getA()
-    {
-        return a;
+
+    public int getHeartRate() {
+        return heartRate;
     }
 }
